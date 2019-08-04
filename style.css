@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/*spacer*/
+
+:root {
+    --color-1: rgb(242, 229, 162);
+    --color-2: rgb(242, 192, 148);
+    --color-3: rgb(242, 168, 141);
+    --color-4: rgb(242, 147, 126);
+    --color-5: rgb(13, 8, 7);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid red; */
+    /*uncomment in case of development*/
+}
+
+body {
+    background-color: rgb(230, 230, 230);
+}
+
+.container {
+    background-color: white;
+    width: 450px;
+    height: 100vh;
+    margin: auto;
+    box-shadow: 0px 0px 64px 16px rgba(135, 135, 135, 1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+#header {
+    background-image: url('images/evening-55067_640.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 1.4;
+    color: white;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+h1 {
+    padding-left: 20px;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.5em;
+    margin-top: auto;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    color: var(--color-1);
+    transition: opacity 0.2s ease-in-out;
+}
+
+h1:hover {
+    opacity: 0.9;
+}
+
+#refresh {
+    margin-left: auto;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: var(--color-5);
+    font-size: 1.3em;
+    height: 25px;
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+#refresh:hover {
+    opacity: 1;
+}
+
+#body {
+    background-color: rgb(13, 8, 7);
+    flex: 3;
+}
+
+#footer {
+    background-color: rgb(242, 192, 148);
+    flex: 0.5;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#addButtonContainer {
+    flex-basis: 12%;
+    display: flex;
+}
+
+#addTodoInput {
+    margin: auto;
+    flex: 0.95;
+    padding: 20px;
+    border: none;
+    border-radius: 0 0 20px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5em;
+    background: none;
+    color: var(--color-5);
+    opacity: 0.7;
+    transition: opacity 0.1s ease-in;
+}
+
+#addTodoInput:hover {
+    opacity: 1;
+}
+
+#add {
+    margin: auto;
+    color: var(--color-5);
+    font-size: 1.9em;
+    padding-left: 10px;
+    opacity: 0.6;
+    transition: opacity 0.2s ease-in;
+}
+
+#add:hover {
+    opacity: 1;
+}
+
+.todoItem {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    font-size: 1.3em;
+    background-color: var(--color-5);
+    transition: opacity 0.2 ease-in-out;
+}
+
+.todoItem:hover {
+    opacity: 1;
+}
+
+.todoItem p {
+    flex: 0.97;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-2);
+}
+
+.uncheck:hover {
+    color: var(--color-1);
+}
+
+.thrash:hover {
+    color: var(--color-4);
+}
+
+.check {
+    color: var(--color-1);
+}
+
+.check:hover {
+    color: var(--color-4);
+}
+
+#placeHolder {
+    text-align: center;
+    margin-top: 50%;
+    font-family: 'Raleway', sans-serif;
+    color: var(--color-1);
+    opacity: 0.5;
+    cursor: default;
+    transition: opacity 0.2s ease-in-out;
+}
+
+#placeHolder:hover {
+    opacity: 0.6;
+}
+
+.thrash,
+.uncheck {
+    color: var(--color-3);
+}
+
+.strikeThru {
+    text-decoration-line: line-through;
+    color: var(--color-4);
+    opacity: 0.5;
+}
